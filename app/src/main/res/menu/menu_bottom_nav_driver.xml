@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_baseline_home"
+        android:title="@string/home"/>
+    <item
+        android:id="@+id/nav_order"
+        android:icon="@drawable/ic_baseline_car_rental"
+        android:title="@string/history"/>
+    <item
+        android:id="@+id/nav_rating"
+        android:icon="@drawable/ic_baseline_stars"
+        android:title="@string/rating"/>
+    <item
+        android:id="@+id/nav_myProfile"
+        android:icon="@drawable/ic_baseline_person"
+        android:title="@string/profile"/>
+</menu>

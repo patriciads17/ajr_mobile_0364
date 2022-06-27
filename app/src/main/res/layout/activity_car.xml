@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".customer.PromoActivity">
+
+    <TextView
+        android:id="@+id/tv_page_title"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rectangle"
+        android:backgroundTint="@color/yellow"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:padding="5dp"
+        android:text="@string/car"
+        android:textColor="@color/indigo"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/sr_car"
+        android:layout_width="match_parent"
+        android:layout_height="680dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginHorizontal="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_page_title">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_Car"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/rv_car" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/btmNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemIconTint="@color/yellow"
+        app:itemTextColor="@color/yellow"
+        app:labelVisibilityMode="labeled"
+        android:background="@color/indigo"
+        app:menu="@menu/menu_bottom_nav_customer" />
+
+    <include
+        android:id="@+id/layout_loading"
+        layout="@layout/layout_loading"
+        android:visibility="gone" />
+
+</RelativeLayout>

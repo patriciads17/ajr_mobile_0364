@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/rectangle"
+android:backgroundTint="@color/yellow_transparent"
+tools:context=".driver.DriverActivity">
+
+    <ImageView
+        android:id="@+id/ajr_logo"
+        android:layout_width="320dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="50dp"
+        android:contentDescription="@string/login"
+        android:src="@drawable/ajr_manager_page"
+        android:layout_centerHorizontal="true"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="270dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_loginUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Hi"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/indigo"
+            android:background="@drawable/rectangle"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_logout"
+            style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right|center"
+            android:gravity="center"
+            android:layout_marginLeft="15dp"
+            app:icon="@drawable/ic_baseline_login" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="350dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_phonenum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/report"
+            android:textColor="@color/indigo"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_car"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:clickable="true"
+            android:drawableLeft="@drawable/ic_baseline_directions_car"
+            android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right"
+            android:drawablePadding="5dp"
+            android:drawableTint="@color/indigo"
+            android:gravity="left|center"
+            android:text="@string/carreport"
+            android:textColor="@color/indigo"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/btn_driver"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:clickable="true"
+            android:drawableLeft="@drawable/ic_baseline_attribution"
+            android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right"
+            android:drawablePadding="5dp"
+            android:drawableTint="@color/indigo"
+            android:gravity="left|center"
+            android:text="@string/driverreport"
+            android:textColor="@color/indigo"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/btn_income"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"
+            android:clickable="true"
+            android:drawableLeft="@drawable/ic_baseline_auto_graph"
+            android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right"
+            android:drawablePadding="5dp"
+            android:drawableTint="@color/indigo"
+            android:gravity="left|center"
+            android:text="@string/incomereport"
+            android:textColor="@color/indigo"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/btmNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemIconTint="@color/yellow"
+        app:itemTextColor="@color/yellow"
+        app:labelVisibilityMode="labeled"
+        android:background="@color/indigo"
+        app:menu="@menu/menu_bottom_nav_manager" />
+
+    <include
+        android:id="@+id/layout_loading"
+        layout="@layout/layout_loading"
+        android:visibility="gone" />
+
+</RelativeLayout>
